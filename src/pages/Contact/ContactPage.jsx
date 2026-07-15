@@ -277,14 +277,14 @@ const ContactPage = () => {
               </h4>
               <div className="flex gap-2">
                 <a
-                  href="#"
+                  href="https://github.com/Chin-xiao"
                   aria-label="GitHub"
                   className="w-10 h-10 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all duration-300"
                 >
                   <GithubIcon />
                 </a>
                 <a
-                  href="#"
+                  href="https://youtu.be/Ie1LIRHJ1-0?si=1Lor9OpAvUIDusLI"
                   aria-label="YouTube"
                   className="w-10 h-10 rounded-full border border-slate-200 text-slate-600 flex items-center justify-center hover:bg-red-600 hover:text-white hover:border-red-600 transition-all duration-300"
                 >
