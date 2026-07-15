@@ -47,25 +47,36 @@ const ContactPage = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus("loading");
+  e.preventDefault();
+  setStatus("loading");
 
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    let data = {};
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      if (!res.ok) throw new Error("Request failed");
-
-      setStatus("success");
-      setFormData({ name: "", email: "", subject: "", message: "" });
-    } catch (err) {
-      console.error(err);
-      setStatus("error");
+      data = await res.json();
+    } catch {
+      // Response had no JSON body (e.g. route not found locally)
+      console.error("No JSON body in response, status:", res.status);
     }
-  };
+
+    if (!res.ok) {
+      console.error("Server responded with error:", res.status, data);
+      throw new Error(data.error || `Request failed (${res.status})`);
+    }
+
+    setStatus("success");
+    setFormData({ name: "", email: "", subject: "", message: "" });
+  } catch (err) {
+    console.error(err);
+    setStatus("error");
+  }
+};
 
   return (
     <section id="contact" className="py-24 bg-white text-slate-900">
