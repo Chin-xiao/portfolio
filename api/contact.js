@@ -37,8 +37,8 @@ export default async function handler(req, res) {
     const data = await tgRes.json();
 
     if (!data.ok) {
-      console.error("Telegram API error:", data);
-      return res.status(502).json({ error: "Failed to send message" });
+    console.error("Telegram API error:", data);
+    return res.status(502).json({ error: "Failed to send message" }); 
     }
 
     return res.status(200).json({ success: true });
