@@ -129,7 +129,7 @@ const ContactPage = () => {
                     value={formData.name}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-slate-50 rounded-lg border border-slate-200 focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all outline-none"
-                    placeholder="John Doe"
+                    placeholder="ah seven"
                     required
                   />
                 </div>
@@ -146,7 +146,7 @@ const ContactPage = () => {
                     value={formData.email}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-slate-50 rounded-lg border border-slate-200 focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all outline-none"
-                    placeholder="john@example.com"
+                    placeholder="ahseven@gmail.com"
                     required
                   />
                 </div>
