@@ -54,7 +54,7 @@ export default function Navbar() {
         <span className="bg-blue-600 text-white rounded-full w-5 h-5 flex items-center justify-center group-hover:bg-white group-hover:text-blue-600 transition">
           &gt;
         </span>
-        Download CV
+        AI Services
       </NavLink>
     </nav>
   );

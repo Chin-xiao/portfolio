@@ -5,8 +5,8 @@ import Aboutpage from "./pages/About/Aboutpage";
 import ContactPage from "./pages/Contact/ContactPage";
 import ServicePage from "./pages/Service/ServicePage";
 import ProjectPage from "./pages/Projects/ProjectPage";
-import DownCvPage from "./pages/DownloadCV/DownCvPage";
 import Navbar from "./components/Navbar";
+import Aiservices from "./pages/Aiservices/Aiservices";
 
 export default function App() {
   return (
@@ -18,7 +18,7 @@ export default function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/services" element={<ServicePage />} />
         <Route path="/projects" element={<ProjectPage />} />
-        <Route path="/download-cv" element={<DownCvPage />} />
+        <Route path="/ai-services" element={<Aiservices />} />
       </Routes>
     </BrowserRouter>
   );
